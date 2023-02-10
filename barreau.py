@@ -1,14 +1,14 @@
 import re
 
-def hashtags_to_links(text):
+def lyen(text):
     # Remplace les hashtags trouvés dans la chaîne de caractères par des lien de recherche sur instagram
-    def replace_hashtag(match):
-        hashtag = match.group()
+    def funhashtag(x):
+        hashtag = x.group()
         link = f'<a href="https://instagram.com/search?q={hashtag}">{hashtag}</a>'
         return link
     
-    return re.sub(r'#\w+', replace_hashtag, text)
+    return re.sub(r'#\w+', funhashtag, text)
 
 text = "Je suis #Barreau Sachy #Edvaelle avec des #cheveux 4C"
-result = hashtags_to_links(text)
-print(result)
+rezilta= lyen(text)
+print(rezilta)
